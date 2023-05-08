@@ -7,8 +7,15 @@ namespace Prime.Benchmarks;
 public class PrimeNumbersBenchmarks
 {
     [Benchmark]
-    public void IsPrimeNumber()
+    public void IsPrimeNumber10_000()
     {
         var result = PrimeNumbers.Get(1, 10_000).ToList();
     }
+
+    [Benchmark]
+    public void IsPrimeNumber100_000()
+    {
+        var result = PrimeNumbers.Get(1, 100_000).ToList();
+    }
+
 }
