@@ -16,8 +16,10 @@ public static class PrimeNumbers
         if (number == 1)
             return false;
 
-        var upperLimit = (number / 2) + 1;
+        if (number == 2 || number == 3)
+            return true;
 
+        var upperLimit = Math.Sqrt(number) + 1;
         for (int i = 2; i < upperLimit; i++)
         {
             if (number % i == 0)
